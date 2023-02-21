@@ -1,0 +1,140 @@
+﻿<Window x:Class="Curriculum_Vitae.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Curriculum_Vitae"
+        mc:Ignorable="d" Height="712" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" Closing="Window_Closing">
+    <Grid>
+        <Canvas x:Name="cvTitle" HorizontalAlignment="Center" Height="65" Margin="0,0,-4,0" VerticalAlignment="Top" Width="1196" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}">
+            <TextBlock x:Name="tbTitle" Canvas.Left="471" TextWrapping="Wrap" Text="Resume Creator" Canvas.Top="11" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Constantia" FontSize="36" RenderTransformOrigin="0.83,0.517"/>
+        </Canvas>
+        <Canvas x:Name="cvPart1" Visibility="Visible" HorizontalAlignment="Left" Height="610" VerticalAlignment="Top" Width="1195" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Margin="-1,70,-2,0">
+            <Image x:Name="ImgDisplay" Height="121" Canvas.Left="871" Canvas.Top="48" Width="190"/>
+            <TextBlock x:Name="tbName" Canvas.Left="109" TextWrapping="Wrap" Text="Your Name " Canvas.Top="101" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtName" Height="32" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="96" Width="478" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="1"/>
+            <TextBlock x:Name="tbPhone" Canvas.Left="109" TextWrapping="Wrap" Text="Phone " Canvas.Top="138" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtPhone" Height="30" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="134" Width="478" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="2"/>
+            <TextBlock x:Name="tbAddress" Canvas.Left="109" TextWrapping="Wrap" Text="Address " Canvas.Top="174" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtAddress" Height="31" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="169" Width="478" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="3"/>
+            <TextBlock x:Name="tbEmail" Canvas.Left="109" TextWrapping="Wrap" Text="Email" Canvas.Top="209" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtEmail" Height="31" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="204" Width="478" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="-1"/>
+            <Button x:Name="btnUpload" Content="Upload Image" Canvas.Left="914" Canvas.Top="191" Width="110" Background="#FF73B3CB" FontFamily="Constantia" FontSize="16" Foreground="White" Click="btnUpload_Click_1" Padding="2" TabIndex="14"/>
+            <TextBlock x:Name="tbPersonalProfile" Canvas.Left="102" TextWrapping="Wrap" Text="Personal Profile" Canvas.Top="58" FontFamily="Constantia" FontSize="22" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBlock x:Name="tbFathersName" Canvas.Left="109" TextWrapping="Wrap" Text="Father's Name" Canvas.Top="260" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtFather_sName" Height="32" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="255" Width="280" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="5"/>
+            <TextBlock x:Name="tbMother_sName" Canvas.Left="109" TextWrapping="Wrap" Text="Mother's Name" Canvas.Top="294" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtMother_sName" Height="30" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="290" Width="280" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="6"/>
+            <TextBlock x:Name="tbBirthday" Canvas.Left="607" TextWrapping="Wrap" Text="BirthDate" Canvas.Top="294" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBlock x:Name="tbReligion" Canvas.Left="607" TextWrapping="Wrap" Text="Religion" Canvas.Top="331" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <DatePicker x:Name="birthdate" Canvas.Left="776" Canvas.Top="288" FontFamily="Constantia" FontSize="18" Height="34" Width="295" Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" RenderTransformOrigin="0.5,0.5" SelectedDateFormat="Short" SelectedDate="12-12-12" TabIndex="11">
+                <DatePicker.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.064"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </DatePicker.RenderTransform>
+            </DatePicker>
+            <ComboBox x:Name="cbReligion" Canvas.Left="776" Canvas.Top="328" Width="295" FontSize="16" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" TabIndex="12"/>
+            <TextBlock x:Name="tbNationality" Canvas.Left="109" TextWrapping="Wrap" Text="Nationality" Canvas.Top="331" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtNationality" Height="31" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="326" Width="280" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="7"/>
+            <TextBlock x:Name="tbMaterialStatus" Canvas.Left="606" TextWrapping="Wrap" Text="Material Status" Canvas.Top="367" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <RadioButton x:Name="rbMarried" Content="Married" Canvas.Left="776" Canvas.Top="368" FontFamily="Constantia" FontSize="16" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <RadioButton x:Name="rbUnMarried" Content="Unmarried" Canvas.Left="878" Canvas.Top="368" FontFamily="Constantia" FontSize="16" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" TabIndex="13"/>
+            <TextBlock x:Name="tbBloodGroup" Canvas.Left="605" TextWrapping="Wrap" Text="Blood Group" Canvas.Top="260" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <ComboBox x:Name="cbBloodGroup" Canvas.Left="776" Canvas.Top="257" Width="295" FontSize="16" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" TabIndex="10"/>
+            <TextBlock x:Name="tbHeight" Canvas.Left="109" TextWrapping="Wrap" Text="Height" Canvas.Top="367" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtHeight" Height="31" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="362" Width="280" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="8"/>
+            <TextBlock x:Name="tbPermanentAddress" Canvas.Left="109" TextWrapping="Wrap" Text="Permanent Address" Canvas.Top="408" FontFamily="Constantia" FontSize="18" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <TextBox x:Name="txtPermanentAddress" Height="49" Canvas.Left="284" TextWrapping="Wrap" Canvas.Top="401" Width="792" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="9"/>
+            <TextBlock x:Name="tbSerialNumber" Canvas.Left="109" Canvas.Top="23" Text="Serial Number" TextWrapping="Wrap" Height="25" Width="133" FontWeight="Bold" FontFamily="Constantia" FontSize="16" Foreground="#FFFBFBFB"/>
+            <TextBox x:Name="txtId" Canvas.Left="284" Canvas.Top="23" Text="" TextWrapping="Wrap" Width="93" Height="25" TabIndex="0"/>
+            <Button x:Name="btnNext" Content="Next" Canvas.Left="785" Canvas.Top="480" Width="85" Background="#FF24CAE4" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" FontFamily="Constantia" FontSize="24" RenderTransformOrigin="-3.6,0.806" Padding="5" Height="40" Click="btnNext_Click" TabIndex="15"/>
+            <Button x:Name="btnImageUpdate" Visibility="Hidden" Content="Update Image" Canvas.Left="896" Canvas.Top="194" Width="130" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" FontFamily="Constantia" FontSize="18" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Click="btnImageUpdate_Click"/>
+            <Button x:Name="btnShow" Content="Show Resume" Canvas.Left="586" Canvas.Top="480" Width="180" Padding="2,2,2,3" FontFamily="Constantia" FontSize="24" Background="#FF0FC7C7" Foreground="#FFF3F3F3" Height="41" Click="btnShow_Click"/>
+        </Canvas>
+        <Canvas x:Name="cvPart2" Visibility="Hidden" HorizontalAlignment="Left" Height="619" VerticalAlignment="Top" Width="1195" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Margin="0,69,-3,-59">
+            <TextBlock x:Name="tbAcademicQualification" Canvas.Left="77" TextWrapping="Wrap" Text="Academic Qualifications" Canvas.Top="7" FontFamily="Constantia" FontSize="22" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <Canvas x:Name="cvSSC" Visibility="Visible" Height="120" Canvas.Left="50" Canvas.Top="31" Width="960">
+                <TextBox x:Name="txtSSCInstituteName" Height="28" Canvas.Left="168" TextWrapping="Wrap" Canvas.Top="48" Width="770" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="16"/>
+                <TextBlock x:Name="tbInstitute" TextWrapping="Wrap" Text="Institute Name" Canvas.Top="49" FontFamily="Constantia" FontSize="18" Foreground="White" Canvas.Left="24"/>
+                <TextBox x:Name="txtSSCGroup" Height="28" Canvas.Left="167" TextWrapping="Wrap" Canvas.Top="80" Width="181" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="17"/>
+                <TextBlock x:Name="tbGroup" Canvas.Left="25" TextWrapping="Wrap" Text="Group" Canvas.Top="81" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBox x:Name="txtSSCResult" Height="28" Canvas.Left="442" TextWrapping="Wrap" Canvas.Top="80" Width="181" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="18"/>
+                <TextBlock x:Name="tbResult" Canvas.Left="378" TextWrapping="Wrap" Text="GPA" Canvas.Top="81" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBox x:Name="txtSSCPassingYear" Height="28" Canvas.Left="757" TextWrapping="Wrap" Canvas.Top="79" Width="181" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="19"/>
+                <TextBlock x:Name="tbPassingYear" Canvas.Left="651" TextWrapping="Wrap" Text="Passing Year" Canvas.Top="80" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBlock x:Name="tbEduName" Canvas.Left="168" TextWrapping="Wrap" Text="Secondary School Certificate" Canvas.Top="15" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBox x:Name="txtReferenceName" Height="28" Canvas.Left="169" TextWrapping="Wrap" Canvas.Top="302" Width="770" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="25"/>
+                <TextBlock x:Name="tbReferenceName" TextWrapping="Wrap" Text="Name" Canvas.Top="303" FontFamily="Constantia" FontSize="18" Foreground="White" Canvas.Left="29"/>
+                <TextBox x:Name="txtAboutHis" Height="28" Canvas.Left="170" TextWrapping="Wrap" Canvas.Top="339" Width="770" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="24"/>
+                <TextBlock x:Name="tbReferenceAbout" TextWrapping="Wrap" Text="About His/Her" Canvas.Top="340" FontFamily="Constantia" FontSize="18" Foreground="White" Canvas.Left="30"/>
+            </Canvas>
+            <Canvas x:Name="cvHSC" Visibility="Visible" Height="110" Canvas.Left="70" Canvas.Top="151" Width="935">
+                <TextBox x:Name="txtHSCInstituteName" Height="28" Canvas.Left="149" TextWrapping="Wrap" Canvas.Top="37" Width="770" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="20"/>
+                <TextBlock x:Name="tbInstitute2" Canvas.Left="5" TextWrapping="Wrap" Text="Institute Name" Canvas.Top="38" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBox x:Name="txtHSCgroup" Height="28" Canvas.Left="149" TextWrapping="Wrap" Canvas.Top="69" Width="181" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="21"/>
+                <TextBlock x:Name="tbGroup1_Copy" Canvas.Left="4" TextWrapping="Wrap" Text="Group" Canvas.Top="70" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBox x:Name="txtHSCResult" Height="28" Canvas.Left="423" TextWrapping="Wrap" Canvas.Top="69" Width="181" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="22"/>
+                <TextBlock x:Name="tbResult2" Canvas.Left="359" TextWrapping="Wrap" Text="GPA" Canvas.Top="70" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBox x:Name="txtHSCpassingYear" Height="28" Canvas.Left="738" TextWrapping="Wrap" Canvas.Top="68" Width="181" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="23"/>
+                <TextBlock x:Name="tbPassingYear2" Canvas.Left="632" TextWrapping="Wrap" Text="Passing Year" Canvas.Top="69" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+                <TextBlock x:Name="tbEduName2" Canvas.Left="155" TextWrapping="Wrap" Text="Higher Secondary School Certificate" Canvas.Top="4" FontFamily="Constantia" FontSize="18" Foreground="White"/>
+            </Canvas>
+            <Button x:Name="btnInsert1" Content="Save" Canvas.Left="1059" Canvas.Top="249" Width="75" Foreground="White" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" FontFamily="Constantia" FontSize="24" Click="btnSave_Click" RenderTransformOrigin="-6.533,-6.419" Padding="2" FontWeight="Bold" TabIndex="27"/>
+            <Button x:Name="btnBack" Content="Back" Canvas.Left="1057" Canvas.Top="81" Width="75" FontFamily="Constantia" FontSize="24" Click="btnBack_Click" Foreground="White" Background="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}" Padding="2"/>
+            <ListView Name="lstEmployee" Visibility="Hidden" Height="160" Canvas.Left="80" Canvas.Top="421" Width="1000">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="View" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="View" Name="View" Click="View_Click" CommandParameter="{Binding}">
+                                    </Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Update" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" Name="Update" Click="Update_Click" CommandParameter="{Binding}">
+                                    </Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Delete" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete" Name="Delete" Click="Delete_Click"  CommandParameter="{Binding}"></Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Images" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="20" Source="{Binding ImageSrc}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Phone" Width="100" DisplayMemberBinding="{Binding Phone}"/>
+                        <GridViewColumn Header="Present Address" Width="150" DisplayMemberBinding="{Binding PresentAddress}"/>
+                        <GridViewColumn Header="Email" Width="120" DisplayMemberBinding="{Binding Email}"/>
+                        <GridViewColumn Header="Blood Group" Width="80" DisplayMemberBinding="{Binding BloodGroup}"/>
+                        <GridViewColumn Header="Permanent Address" Width="160" DisplayMemberBinding="{Binding PermanentAddress}"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <TextBox x:Name="txtAddSkills" Height="28" Canvas.Left="220" TextWrapping="Wrap" Canvas.Top="265" Width="770" FontFamily="Constantia" FontSize="16" Padding="2" TabIndex="24"/>
+            <TextBlock x:Name="tbAddSkills" Canvas.Left="76" TextWrapping="Wrap" Text="Add Skills" Canvas.Top="266" FontFamily="Constantia" FontSize="22" Foreground="White"/>
+            <TextBlock x:Name="tbReferences" Canvas.Left="78" TextWrapping="Wrap" Text="References" Canvas.Top="304" FontFamily="Constantia" FontSize="22" Foreground="White" RenderTransformOrigin="0.346,0.633"/>
+            <Button Content="Add New" Canvas.Left="1038" Canvas.Top="136" Width="115" Background="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Padding="2" UseLayoutRounding="True" FontSize="24" FontFamily="Constantia" FontWeight="Bold" Click="Button_Click"/>
+            <Button x:Name="btnUpdate" Visibility="Hidden" Content="Update" Canvas.Left="1045" Canvas.Top="299" Width="108" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" FontSize="24" FontFamily="Constantia" FontWeight="Bold" Padding="2" Click="btnUpdate_Click"/>
+        </Canvas>
+
+    </Grid>
+</Window>
